@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Register</title>
+<link rel="stylesheet" href="style.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+function validate(form1)
+{
+var psd=window.document.form1.password.value;
+
+check=new RegExp("[^a-z,0-9]")
+
+
+if(psd.length==0)
+{
+alert("enter password correctly");
+return false;
+}
+else if(psd.length!=4)
+{
+alert("enter 4 digit-password");
+return false;
+}
+
+return true;
+}
+</script>
+</head>
+<body>
+<div class="login2">
+    <form name="form1"action="Register.jsp" method="POST" onsubmit="return validate(this)">
+        <h1>
+            Register         </h1><br>
+        Name:<input type="text" name="pname"><br>
+        Emailid:<input type="email" name="emailid"><br>
+        Password:<input type="password" name="password"><br>
+        <input type="submit" name="submit" value="submit">
+
+    </form>
+</body>
+</div>
+</html>

@@ -1,0 +1,54 @@
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript">
+function validate(form1)
+{
+var psd=window.document.form1.pswd.value;
+var id=window.document.form1.user.value;
+check=new RegExp("[^a-z,0-9]")
+
+
+if(psd.length==0)
+{
+alert("enter password correctly");
+return false;
+}
+else if(psd.length!=4)
+{
+alert("enter 4 digit-password correctly");
+return false;
+}
+
+return true;
+}
+</script>
+</head>
+<body>
+
+
+<div class="login">
+<h3>Login</h3>
+<form action="login.jsp" name="form1" onsubmit="return(validate(this))">
+<table">
+<tr >
+<td>Email</td>
+<td><input type="email" name="user"/><td>
+</tr>
+<tr>
+<td>Password:</td>
+<td><input type="password" name="pswd"/></td>
+</tr>
+<tr>
+<td colspan="2" ><input type="submit" name="submit" value="submit" /></td>
+</tr>
+<tr>
+<td ><center>New user <a href="register.html">Register</a></center></td>
+</tr>
+</table>
+ 
+</form>
+</div>
+
+</body>
+</html>
